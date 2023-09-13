@@ -51,7 +51,7 @@
                 let value = $('#{{ $containerKey }}').nestable('serialize');
                 let result = await @this.updateTree(value);
                 if (result['reload'] === true) {
-                    window.location.reload();
+                    $wire.$refresh();
                 }
             });
         }
